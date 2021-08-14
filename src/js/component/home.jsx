@@ -1,26 +1,59 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import Circle from "./circle.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+function Home() {
+	const [trafficLightState, setTrafficLightState] = useState({
+		red_color: false,
+		yellow_color: false,
+		green_color: false
+	});
 
-//create your first component
-const Home = () => {
+	const changeCircle = color => {
+		console.log(color);
+
+		if (color == "red") {
+			setTrafficLightState({
+				red_color: true,
+				yellow_color: false,
+				green_color: false
+			});
+		} else if (color == "yellow") {
+			setTrafficLightState({
+				red_color: false,
+				yellow_color: true,
+				green_color: false
+			});
+		} else if (color == "green") {
+			setTrafficLightState({
+				red_color: false,
+				yellow_color: false,
+				green_color: true
+			});
+		}
+	};
+
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="rectangle">
+			<Circle
+				state={trafficLightState.red_color}
+				colorSon="red"
+				face="https://i.ibb.co/pzm7H2s/numbing-03.png"
+				changeProp={changeCircle}
+			/>
+			<Circle
+				state={trafficLightState.yellow_color}
+				colorSon="yellow"
+				face="https://i.ibb.co/mXJ8Lmy/numb-face-02.png"
+				changeProp={changeCircle}
+			/>
+			<Circle
+				state={trafficLightState.green_color}
+				colorSon="green"
+				face="https://i.ibb.co/3vGsK10/face-01.png"
+				changeProp={changeCircle}
+			/>
 		</div>
 	);
-};
+}
 
 export default Home;

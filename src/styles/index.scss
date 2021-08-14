@@ -1,13 +1,82 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+body {
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.grey {
+    background-color: grey;
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    margin: 0.6rem;
+}
 
-*/
+.red {
+    background-color: #d36340;
+    box-shadow: 0 0 1.5rem #d36340;
+}
+
+.green {
+    background-color: #83e8bd;
+    box-shadow: 0 0 1.5rem #83e8bd;
+}
+
+.yellow {
+    background-color: #ffe26d;
+    box-shadow: 0 0 1.5rem #ffe26d;
+}
+
+.rectangle {
+    background-color: #efac39;
+    display: flex;
+    flex-direction: column;
+    height: 19rem;
+    justify-content: center;
+}
+
+/*.master-div-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.two-rectangle-flex-row {
+    display: flex;
+}
+
+.rectangle-right {
+    background-color: #e99726;
+    height: 19rem;
+    width: 1.3rem;
+}
+
+
+.rectangle-top {
+    background-color: #e99726;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 5rem;
+    height: 0.7rem;
+}
+
+.rectangle-top-bottom {
+    background-color: #bd771e;
+    width: 8rem;
+    height: 0.7rem;
+}
+
+.wire-left {
+    background-color: #333b74;
+    width: 0.5rem;
+    height: 10rem;
+}
+
+.wire-right {
+    background-color: #4a528a;
+    width: 0.5rem;
+    height: 10rem;
+}*/
